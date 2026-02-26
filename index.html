@@ -5,23 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TiRiYER</title>
     <style>
+        /* Sayfa ayarları */
         body, html {
-            margin: 0; padding: 0; width: 100%; height: 100%;
-            overflow: hidden; background-color: #f8f8f8; /* Logonun arka planına uygun renk */
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #f7f7f7; /* Videonun arka plan rengine yakın bir ton */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        /* Video ayarları */
         video {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%; min-height: 100%;
-            width: auto; height: auto;
-            object-fit: cover; /* Videoyu ekrana tam yayar */
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain; /* Videoyu kırpmaz, kutunun içine sığdırır */
+            box-shadow: 0 0 20px rgba(0,0,0,0.05); /* Hafif derinlik */
         }
     </style>
 </head>
 <body>
     <video autoplay muted loop playsinline>
-        <source src="intro.mp4" type="video/mp4">
+        <source src="0226.mp4" type="video/mp4">
         Tarayıcınız video etiketini desteklemiyor.
     </video>
 </body>
