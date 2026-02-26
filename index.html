@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TiRiYER</title>
     <style>
+        /* Sayfanın tamamını videonun arka plan rengiyle kaplıyoruz */
         body, html {
             margin: 0;
             padding: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
-            background-color: #f7f7f7;
+            background-color: #f7f7f7; /* Videonun orijinal arka plan rengi */
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         video {
-            max-width: 95%; /* Kenarlardan çok az pay bırakır, logonun taşmasını önler */
-            max-height: 95%;
+            /* Videoyu ekranın boyutlarına göre en büyük boyuta getirir ama oranını bozmaz */
+            max-width: 100%;
+            max-height: 100%;
             width: auto;
             height: auto;
-            object-fit: contain;
+            outline: none;
+            border: none;
         }
     </style>
 </head>
